@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Dashboard</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Use flexbox for layout */
+        }
+
+        .sidebar {
+            width: 200px; /* Adjust sidebar width as needed */
+            background-color: #f0f0f0;
+            padding: 20px;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .sidebar a:hover {
+            background-color: #e0e0e0;
+        }
+
+        .dashboard-container {
+            flex-grow: 1; /* Allow dashboard to expand */
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            margin-bottom: 70px; /* 50px + 20px padding */
+        }
+
+        .dashboard-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .report-subscription-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            position: fixed; /* Fixed position at the bottom */
+            bottom: 0;
+            left: 200px; /* Match sidebar width */
+            width: calc(100% - 240px); /* Total width - sidebar width - padding */
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+        }
+
+        .report-box, .subscription-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            text-align: center;
+        }
+
+        .dashboard-item a{
+            display:block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Content</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Reports</a></li>
+        </ul>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="dashboard-item"><a href="index.html">Item 1</a></div>
+        <div class="dashboard-item"><a href="index.html">Item 2</a></div>
+        <div class="dashboard-item"><a href="index.html">Item 3</a></div>
+        <div class="dashboard-item"><a href="index.html">Item 4</a></div>
+        <div class="dashboard-item"><a href="index.html">Item 5</a></div>
+        <div class="dashboard-item"><a href="index.html">Item 6</a></div>
+
+    </div>
+
+    <div class="report-subscription-container">
+        <div class="report-box">Reports</div>
+        <div class="subscription-box">Subscriptions</div>
+    </div>
+
+</body>
+</html>
